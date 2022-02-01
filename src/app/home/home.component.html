@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <input type="number" required #numberInput="ngModel" [(ngModel)]="num"/>
+    <button class="btn btn-success" (click)="getMutiplos(num)">Obtener</button>
+    
+  </div>
+  <div>
+    <ul class="list-inline color-{{color}}">
+        <li class="list-inline-item">El numero {{ num }} es multiplo de [</li>
+        <li class="list-inline-item" *ngIf="valor3">3, </li>
+        <li class="list-inline-item" *ngIf="valor5">5, </li>
+        <li class="list-inline-item" *ngIf="valor7">7, </li>
+        <li class="list-inline-item">]</li>
+    </ul>
+        
+
+    <ul class="list-inline">
+      <h3>Multiplos de 3 entre 0 y {{ num }}</h3>
+      <li class="list-group-item" *ngIf="mult3.length === 0">No tiene multiplos de 3</li>
+      <li class="list-inline-item" *ngFor="let mul3 of mult3; index as i">
+        {{ mul3 }},
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <h3>Multiplos de 5 entre 0 y {{ num }}</h3>
+      <li class="list-group-item" *ngIf="mult5.length === 0">No tiene multiplos de 5</li>
+      <li class="list-inline-item" *ngFor="let mul5 of mult5; index as i">
+        {{ mul5 }},
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <h3>Multiplos de 7 entre 0 y {{ num }}</h3>
+      <li class="list-group-item" *ngIf="mult7.length === 0">No tiene multiplos de 7</li>
+      <li class="list-inline-item" *ngFor="let mul7 of mult7; index as i">
+        {{ mul7 }},
+      </li>
+    </ul>
+  </div>
+  <button class="btn btn-dark" (click)="setResultado()">Guardar</button>
+</div>

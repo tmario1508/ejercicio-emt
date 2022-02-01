@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ejercicio-emt-be0b5": {
+      "hosting": {
+        "ejercicio-emt": [
+          "ejercicio-emt-be0b5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ejercicio-emt-be0b5"
+  }
+}
